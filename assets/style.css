@@ -41,3 +41,15 @@ body{font-weight:400}h2,h3{font-weight:500;letter-spacing:-.025em}p{max-width:65
 .hero + .ribbon + .pillars{padding-top:clamp(1.5rem,2.4vw,2.5rem)}
 @media(max-width:850px){.hero + .ribbon{margin-top:-74px;margin-bottom:0}.hero + .ribbon svg{height:112px;aspect-ratio:auto}.hero + .ribbon + .pillars{padding-top:1.5rem}}
 @media(max-width:520px){.hero + .ribbon{margin-top:-69px}.hero + .ribbon svg{height:105px}.hero + .ribbon + .pillars{padding-top:1.25rem}}
+
+/* Redes sociais — textura mineral e transição contínua para FAQ */
+.social-section{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(180deg,var(--cream) 0%,#ead6c7 24%,#e8d1bf 48%,#f0dfd1 72%,var(--cream) 100%);padding-block:clamp(3.8rem,7vw,6.5rem)}
+.social-section::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22180%22%20height%3D%22180%22%20viewBox%3D%220%200%20180%20180%22%3E%3Cfilter%20id%3D%22grain%22%20x%3D%220%22%20y%3D%220%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%22.78%22%20numOctaves%3D%223%22%20stitchTiles%3D%22stitch%22%2F%3E%3CfeColorMatrix%20type%3D%22saturate%22%20values%3D%220%22%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20filter%3D%22url(%23grain)%22%20opacity%3D%22.58%22%2F%3E%3C%2Fsvg%3E");background-size:180px 180px;mix-blend-mode:multiply;opacity:.17;mask-image:linear-gradient(180deg,transparent,#000 22%,#000 65%,transparent)}
+.social-section::after{content:"";position:absolute;z-index:-1;pointer-events:none;width:85%;height:145%;right:-26%;top:-47%;border:1px solid #fff7e6a8;border-radius:48%;transform:rotate(-23deg);box-shadow:0 0 0 35px #fff5e51b,0 0 0 80px #fff5e510;mask-image:linear-gradient(180deg,transparent,#000 30%,#000 60%,transparent)}
+.social-section .social-layout{grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:clamp(2rem,8vw,7rem);align-items:center}
+.social-copy .social-links{margin-top:2.2rem}.social-copy .social-links a{padding-block:1rem}.social-copy h2{max-width:12ch}
+.instagram-panel{width:100%;max-width:450px;justify-self:center;background:#fffaf5;border:1px solid #fff9ee;border-radius:24px;overflow:hidden;box-shadow:0 20px 50px #58382b1f,0 3px 10px #58382b12;min-width:0}
+.instagram-panel iframe{display:block;width:100%;height:480px;border:0;background:#fff}
+.instagram-fallback{display:block;text-align:center;padding:.85rem 1rem;font-size:.82rem;font-weight:600;color:#87394d;border-top:1px solid #e7d5c5;transition:background .3s}.instagram-fallback:hover{background:#f1e0d2}
+@media(max-width:850px){.social-section .social-layout{grid-template-columns:minmax(0,1fr);gap:2rem}.social-copy h2{max-width:none}.instagram-panel{justify-self:center}.social-section::after{right:-70%;width:140%}}
+@media(max-width:520px){.instagram-panel{border-radius:18px}.instagram-panel iframe{height:420px}.social-copy .social-links{margin-top:1.5rem}}
