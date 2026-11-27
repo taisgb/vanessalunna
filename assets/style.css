@@ -53,3 +53,44 @@ body{font-weight:400}h2,h3{font-weight:500;letter-spacing:-.025em}p{max-width:65
 .instagram-fallback{display:block;text-align:center;padding:.85rem 1rem;font-size:.82rem;font-weight:600;color:#87394d;border-top:1px solid #e7d5c5;transition:background .3s}.instagram-fallback:hover{background:#f1e0d2}
 @media(max-width:850px){.social-section .social-layout{grid-template-columns:minmax(0,1fr);gap:2rem}.social-copy h2{max-width:none}.instagram-panel{justify-self:center}.social-section::after{right:-70%;width:140%}}
 @media(max-width:520px){.instagram-panel{border-radius:18px}.instagram-panel iframe{height:420px}.social-copy .social-links{margin-top:1.5rem}}
+
+/* Hero integral e navegação glass — mantém a geometria SVG aprovada */
+html{scroll-padding-top:110px}
+.nav{position:fixed;inset:16px 0 auto;width:100%;z-index:40;background:transparent;border:0;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;pointer-events:none}
+.nav.scrolled{box-shadow:none}
+.nav-inner{position:relative;pointer-events:auto;width:min(1220px,calc(100% - 3rem));min-height:76px;padding:10px clamp(18px,2.4vw,34px);border:1px solid #fff8ecc4;border-radius:999px;background:rgba(249,239,229,.86);backdrop-filter:blur(18px) saturate(135%);-webkit-backdrop-filter:blur(18px) saturate(135%);box-shadow:0 8px 30px #30232120,inset 0 1px 0 #fff9efb0;transition:background .35s,box-shadow .35s}
+.nav.scrolled .nav-inner{background:rgba(249,239,229,.95);box-shadow:0 12px 35px #30232125}
+.nav .brand span{font-size:clamp(1.65rem,2.4vw,2.15rem)}
+.nav nav{gap:clamp(.75rem,1.6vw,1.45rem)}
+.nav .btn{min-height:44px;padding:.65rem 1.35rem}
+.hero{min-height:clamp(700px,42vw,820px);padding:0}
+.hero-inner{padding-block:clamp(128px,11vw,185px) clamp(115px,9vw,150px)}
+.hero-photo{inset:clamp(58px,4.3vw,82px) 0 0 43%;mask-image:linear-gradient(90deg,transparent 0%,#000 32%),linear-gradient(180deg,transparent,#000 44px);mask-composite:intersect;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 32%),linear-gradient(180deg,transparent,#000 44px);-webkit-mask-composite:source-in}
+.hero-photo img{object-position:50% 0%;object-fit:cover}
+.hero-arc{opacity:.55}
+/* O encontro das seções fica dentro da faixa (y=88 no viewBox de 1440).
+   A altura e a sobreposição escalam juntas, sem deixar uma linha de fundo aparente. */
+.hero + .ribbon{margin-top:-6.111111vw;margin-bottom:0}
+.hero + .ribbon svg{width:100%;height:auto;aspect-ratio:1440 / 170}
+.hero + .ribbon + .pillars{padding-top:clamp(1rem,2vw,2rem)}
+@media(max-width:850px){
+  html{scroll-padding-top:90px}
+  .nav{inset:10px 0 auto}
+  .nav-inner{width:calc(100% - 1.5rem);min-height:65px;padding:8px 17px}
+  .nav nav{inset:calc(100% + 8px) 0 auto;gap:.9rem;border-radius:24px;background:#f9efe5f7;box-shadow:0 12px 35px #30232125;border:1px solid #fff8ec}
+  .hero{min-height:0}
+  .hero-inner{padding:7.3rem 0 0}
+  .hero-photo{inset:auto;height:clamp(340px,74vw,580px);mask-image:linear-gradient(180deg,transparent,#000 15%);mask-composite:add;-webkit-mask-image:linear-gradient(180deg,transparent,#000 15%);-webkit-mask-composite:source-over}
+  .hero-photo img{object-position:center top}
+  .hero + .ribbon{margin-top:-53px}
+  .hero + .ribbon svg{height:112px;aspect-ratio:auto}
+  .hero + .ribbon + .pillars{padding-top:1.4rem}
+}
+@media(max-width:520px){
+  .nav .brand span{font-size:1.65rem}
+  .hero-inner{padding-top:6.8rem}
+  .hero-photo{height:clamp(320px,86vw,445px)}
+  .hero + .ribbon{margin-top:-49px}
+  .hero + .ribbon svg{height:105px}
+  .hero + .ribbon + .pillars{padding-top:1rem}
+}
