@@ -1,8 +1,6 @@
 # Vanessa Lunna — prévia conceitual
-Site estático: publique a raiz em GitHub Pages. Abra index.html para visualizar localmente. Faixa construída em SVG inline com texto animado por JavaScript. Fotografias originais convertidas para WebP. Antes da publicação comercial, validar registro, endereço, telefone, informações de formação, autorização de imagem e marca. Links de agendamento usam Bio Site provisoriamente. Não inclui depoimentos inventados nem comparativos de pacientes. A prévia usa noindex; não equivale a controle de acesso.
+Site estático. Faixa SVG animada por JavaScript, composição editorial, títulos sem numeração e navegação responsiva. As fotografias originais otimizadas devem ser carregadas em assets/ antes da ativação do GitHub Pages. Validar registro profissional, endereço, formação e autorizações de imagem. Links de contato via Bio Site provisoriamente. Prévia não oficial, noindex (não constitui controle de acesso).
 
-## Revisão editorial
-Composição assimétrica, listas de tratamentos, imagens distintas, microinterações e títulos sem numeração. Referências de pesquisa: Truekind Skincare (Awwwards), Codrops OnScrollTypographyAnimations, TextClipScroll e ImageExpansionTypography. Implementação própria sem dependências dessas demos. Endereço encontrado em diretórios comerciais; confirmar com a clínica. Revisão visual em navegador pendente: execução do Chromium bloqueada pelo ambiente.
+Imagens pendentes: hero.webp, atendimento.webp, cuidado.webp, tecnologia.webp, vanessa.webp, facial.webp, regenerativa.webp.
 
-## Publicação
-As fotografias WebP do pacote editorial devem ser carregadas na pasta assets antes da ativação do GitHub Pages.
+Referências de design: Truekind Skincare (Awwwards) e demos Codrops OnScrollTypographyAnimations, TextClipScroll e ImageExpansionTypography. Implementação própria. Revisão visual em navegador pendente.
