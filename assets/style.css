@@ -33,3 +33,11 @@ body{font-weight:400}h2,h3{font-weight:500;letter-spacing:-.025em}p{max-width:65
 .location .contact-map{border-color:#fff6e8b0;box-shadow:0 24px 55px #58382b23,0 3px 10px #58382b16;outline:1px solid #ba92735c;outline-offset:7px;background:#f5e4d6}
 .location .outline-dark{background:#fff5e52e}
 @media(max-width:850px){.location::after{width:125%;right:-67%;top:-47%;opacity:.65}.location .contact-map{outline-offset:4px}}
+
+/* Faixa — posição ancorada à base da hero; esquerda baixa, direita elevada */
+.hero + .ribbon{position:relative;z-index:5;width:100%;margin-top:clamp(-145px,-9vw,-105px);margin-bottom:0;overflow:hidden;filter:drop-shadow(0 9px 9px #30232125)}
+.hero + .ribbon svg{display:block;width:100%;height:auto;aspect-ratio:1440 / 170;margin:0;overflow:hidden}
+.hero + .ribbon text{font-size:17px;letter-spacing:1.8px;font-weight:500}
+.hero + .ribbon + .pillars{padding-top:clamp(1.5rem,2.4vw,2.5rem)}
+@media(max-width:850px){.hero + .ribbon{margin-top:-74px;margin-bottom:0}.hero + .ribbon svg{height:112px;aspect-ratio:auto}.hero + .ribbon + .pillars{padding-top:1.5rem}}
+@media(max-width:520px){.hero + .ribbon{margin-top:-69px}.hero + .ribbon svg{height:105px}.hero + .ribbon + .pillars{padding-top:1.25rem}}
